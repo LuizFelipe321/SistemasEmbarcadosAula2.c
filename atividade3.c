@@ -4,7 +4,7 @@
 
 int main(){
 
-    int base, altura, perimetro;
+    int base, perimetro;
 
     printf("Escreva o valor da base:\n");
     scanf("%d", &base);

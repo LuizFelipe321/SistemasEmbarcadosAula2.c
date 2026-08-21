@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+
+    int numeroMeses, calculo, rendidos;
+    float valor, taxa;
+
+    printf("Digite o valor investido:");
+    scanf("%f", &valor);
+
+    printf("Digite a taxa de juros que sera aplicada no capital:");
+    scanf("%f", &taxa);
+
+    printf("Digite o numero de meses em que sera aplicado esse juros mensalmente:");
+    scanf("%d", &numeroMeses);
+    
+    taxa *= 100;
+
+    calculo = valor * pow(1+ taxa,numeroMeses); // Calculo pela formula de juros composto
+
+    rendidos = calculo - taxa;
+
+    printf("Valor acumulado: %.2f", calculo);
+    printf("Valor rendidos: %.2f", rendidos);
+
+    return 0;
+}
